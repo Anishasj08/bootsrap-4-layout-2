@@ -1,0 +1,62 @@
+:root{
+    --color--dark:#000;
+    --color--white:#fff;
+    --color--primary:#ff9b51;
+}
+
+html{
+    color:var(--color--white);
+}
+
+.main-header{
+    background-color:var(--color--dark);
+}
+
+
+.main-header .bg-dark {
+    background-color: transparent !important;
+}
+
+
+.main-header .navbar-nav .nav-link{
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+
+.main-header .navbar-nav .nav-link:active,
+.main-header .navbar-nav .nav-link:hover,
+.main-header .navbar-nav .nav-link:focus
+{
+    color:var(--color--primary);
+}
+
+
+.main-header .navbar-nav .nav-link::after{
+    content:"";
+    bottom:0;
+    left:0;
+    width:0%;
+    height:3px;
+    background-color: #ff9b51;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+
+.main-header .navbar-nav .nav-link:hover::after,
+.main-header .navbar-nav .active .nav-link::after
+{
+    width:100%;
+    
+
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+}
+
+.navbar-dark .navbar-toggler {
+    border:1px solid var(--color--primary)
+   
+}
